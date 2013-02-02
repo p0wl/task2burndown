@@ -43,15 +43,9 @@ expect[tomorrow] = 4;
 
 // Tests
 describe('t2B', function(){
-	describe('#setAndGetData', function(){
-		it('should set the data in the local db', function(){
-			t2b.setData(data);
-			data.should.equal(t2b.getData());
-		});
-	});
 	describe('#transform', function(){
 		it('should do magic', function(){
-			t2b.transform().should.eql(expect);
+			t2b.transform(data).should.eql(expect);
 		});
 	});
 });
